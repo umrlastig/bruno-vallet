@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>LASTIG - Bruno Vallet - Homepage</title>
+  <title>LASTIG - Bruno Vallet</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
       <option data-content='<span class="flag-icon flag-icon-fr"></span>'>Français</option>
     </select>
     <a class="nav-link text-muted subheading" href="/website">LASTIG</a>
-    <a class="nav-link text-muted subheading" href="/geovis">ACTE</a>
+    <a class="nav-link text-muted subheading" href="/acte">ACTE</a>
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
       <span class="d-block d-lg-none">Bruno Vallet</span>
       <span class="d-none d-lg-block">
@@ -54,36 +54,31 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#about">About</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#about">Présentation</a>
+          <a class="nav-link js-scroll-trigger" href="#about"><span class="lang-en">About</span><span class="lang-fr">Présentation</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#interest">Research Interests</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#interest">Sujets de recherche</a>
+          <a class="nav-link js-scroll-trigger" href="#interest"><span class="lang-en">Research Interests</span><span class="lang-fr">Sujets de recherche</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#news">News</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#news">Actualités</a>
+          <a class="nav-link js-scroll-trigger" href="#news"><span class="lang-en">News</span><span class="lang-fr">Actualités</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#experience">Experience</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#experience">Parcours professionnel</a>
+          <a class="nav-link js-scroll-trigger" href="#timeline"><span class="lang-en">Experience</span><span class="lang-fr">Parcours professionnel</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#education">Education</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#education">Formation</a>
+          <a class="nav-link js-scroll-trigger" href="#education"><span class="lang-en">Education</span><span class="lang-fr">Formation</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#publications">Publications</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#publications">Publications</a>
+          <a class="nav-link js-scroll-trigger" href="#publications">Publications</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#projects">Projects</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#projects">Projets</a>
+          <a class="nav-link js-scroll-trigger" href="#projects"><span class="lang-en">Projects</span><span class="lang-fr">Projets</span></a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#supervisions">Supervisions</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger lang-en" href="#other">Other research activities</a>
-          <a class="nav-link js-scroll-trigger lang-fr" href="#other">Autres activités de recherche</a>
+          <a class="nav-link js-scroll-trigger" href="#other"><span class="lang-en">Other research activities</span><span class="lang-fr">Autres activités de recherche</span></a>
         </li>
       </ul>
     </div>
@@ -100,7 +95,7 @@
           <a>bruno<!--anti@spam.fr!-->.vallet@ign.fr</a>
         </div>
         <p class="lead mb-5 lang-en">Senior researcher in Geographic information science, Computer Vision, Teledetection, Lasergrammetry, and 3D City Modeling.</p>
-        <p class="lead mb-5 lang-en">Head of the <a href="">ACTE</a> research team</p>
+        <p class="lead mb-5 lang-en">Head of the <a href="/acte">ACTE</a> research team</p>
         <p class="lead mb-5 lang-fr">Chargé de recherche HDR à l'IGN en sciences de l'information géographique, vision par ordinateur, télédétection, Lasergrammétrie et reconstruction 3D de ville.</p>
         <p class="lead mb-5 lang-fr">Responsable de l'équipe <a href="">ACTE</a></p>
         <div class="social-icons">
@@ -276,12 +271,7 @@
 
     <section id="timeline" class="section appear clearfix">
       <div class="container mar-bot50">
-        <div class="row mar-bot40">
-          <div class="col-lg-12 text-center">
-              <h2 class="section-heading">Experience</h2>
-              <h3 class="section-subheading text-muted mb-5">Past jobs and roles in research</h3>
-          </div>
-        </div>
+		<h2 class="mb-5">Experience</h2>
         <div class="row">
           <div class="col-lg-12">
             <ul class="timeline">
@@ -292,10 +282,12 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>01-09-2005</h4>
-                    <h4 class="subheading">PhD student</h4>
+                    <h4 class="subheading lang-en">PhD student</h4>
+					<h4 class="subheading lang-fr">Doctorant</h4>
                   </div>
 		<div class="timeline-body">
-                    <p class="text-muted">My PhD, <a href="http://alice.loria.fr/publications/papers/2008/bruno_vallet_phd/theseBVfr.pdf"> obtained in July 2008</a>, was supervised by Bruno Levy and dealt with function bases on manifolds.</p>
+                    <p class="text-muted lang-en">My <a href="http://alice.loria.fr/publications/papers/2008/bruno_vallet_phd/theseBVfr.pdf"> PhD </a> obtained in July 2008, was supervised by Bruno Levy and dealt with function bases on manifolds.</p>
+					<p class="text-muted lang-fr">Ma <a href="http://alice.loria.fr/publications/papers/2008/bruno_vallet_phd/theseBVfr.pdf"> thèse </a> obtenue en juillet 2008, a été supervisée par Bruno Levy et traitait des bases de fonction sur les variétés.</p>
                   </div>
                   
                 </div>
@@ -308,10 +300,12 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>01-09-2008</h4>
-                    <h4 class="subheading">Junior researcher</h4>
+                    <h4 class="subheading lang-en">Junior researcher</h4>
+					<h4 class="subheading lang-fr">Chargé de recherches</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">After my PhD, I start working at IGN France as a permanent researcher.</p>
+                    <p class="text-muted lang-en">After my PhD, I start working at IGN France as a permanent junior researcher.</p>
+					<p class="text-muted lang-fr">Après ma thèse, je commence à travailler à l'IGN en tant que chargé de recherches.</p>
                   </div>
                 </div>
               </li>
@@ -323,10 +317,12 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>01-09-2011</h4>
-                    <h4 class="subheading">Senior researcher and head of ARECOS research team at MATIS lab, IGN</h4>
+                    <h4 class="subheading lang-en">Head of ARECOS research team at MATIS lab, IGN</h4>
+					<h4 class="subheading lang-fr">Responsable de l'équipe de recherche ARECOS au laboratoire MATIS, IGN</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">I took the responsibility of a small research team (6-8 people).</p>
+                    <p class="text-muted lang-en">I took the responsibility of a small research team (6-8 people) on urban scene analysis and reconstruction.</p>
+					<p class="text-muted lang-fr">Responsabilité d'une petite équipe de recherche (6-8 personnes) sur l'analyse et la reconstruction de scènes urbaines.</p>
                   </div>
                 </div>
               </li>
@@ -338,10 +334,12 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>01-09-2015</h4>
-                    <h4 class="subheading">Head of GEOM4D research team</h4>
+                    <h4 class="subheading lang-en">Head of GEOM4D research team</h4>
+					<h4 class="subheading lang-fr">Responsable de l'équipe de recherche GEOM4D</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted"> I take the head of a new team working on 4D data processing </p>
+                    <p class="text-muted lang-en"> I take the head of a new team working on 4D data processing </p>
+					<p class="text-muted lang-fr"> Responsabilité d'une nouvelle équipe sur le traitement de données 4D</p>
                   </div>
                 </div>
               </li>
@@ -353,10 +351,12 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>12-2016</h4>
-                    <h4 class="subheading">Habilitation defense</h4>
+                    <h4 class="subheading lang-en">Habilitation defense</h4>
+					<h4 class="subheading lang-fr">Habilitation à diriger des recherches</h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">Defense of my <a href="http://recherche.ign.fr/labos/matis/pdf/hdr/Vallet-Pr%C3%A9sentationHDR.pdf">habilitation (HDR)</a> in GI science, which allows in France to be the main supervisor of PhD students.</p>
+                    <p class="text-muted lang-en">Defense of my <a href="http://recherche.ign.fr/labos/matis/pdf/hdr/Vallet-Pr%C3%A9sentationHDR.pdf">habilitation (HDR)</a> in GI science, which allows in France to be the main supervisor of PhD students.</p>
+					<p class="text-muted lang-fr">Soutenance de mon <a href="http://recherche.ign.fr/labos/matis/pdf/hdr/Vallet-Pr%C3%A9sentationHDR.pdf"> HDR</a> (habilitation à diriger des recherches) en Sciences de l'information géographique, qui autorise en France à diriger des thèses.</p>
                   </div>
                 </div>
               </li>
@@ -367,10 +367,12 @@
                 <div class="timeline-panel">
                   <div class="timeline-heading">
                     <h4>01-09-2018</h4>
-                    <h4 class="subheading">Head of ACTE research team</h4>
+                    <h4 class="subheading lang-en">Head of <a href="https://umrlastig.github.io/acte/"> ACTE </a> research team</h4>
+					<h4 class="subheading lang-fr">Responsable de l'équipe de recherche <a href="https://umrlastig.github.io/acte/"> ACTE </a> </h4>
                   </div>
                   <div class="timeline-body">
-                    <p class="text-muted">I become the coordinator the ACTE research team of the new <a href="http://umrlastig.github.io/website">LASTIG lab.</a></p>
+                    <p class="text-muted lang-en">I become the coordinator the <a href="https://umrlastig.github.io/acte/"> ACTE </a> research team of the new <a href="http://umrlastig.github.io/website">LASTIG </a>lab on remote sensing data acquisition and processing.</a></p>
+					<p class="text-muted lang-fr"> Je deviens responsable de l'équipe <a href="https://umrlastig.github.io/acte/"> ACTE </a> de l'UMR <a href="http://umrlastig.github.io/website">LASTIG </a> sur l'acquisition et le traitement de données de télédétection.</a></p>
                   </div>
                 </div>
               </li>
@@ -388,52 +390,69 @@
 
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Université Paris-Est</h3>
-            <div class="subheading mb-3">Habilitation (HDR)</div>
-            <div>Geographical Information Science</div>
+            <h3 class="mb-0">Habilitation (HDR)</h3>
+            <div class="subheading mb-3">Université Paris-Est</div>
+            <div class="lang-en"> <a href="http://recherche.ign.fr/labos/matis/pdf/hdr/Vallet-Pr%C3%A9sentationHDR.pdf"> Habilitation </a> in geographic information science </div>
+			<div class="lang-fr"> <a href="http://recherche.ign.fr/labos/matis/pdf/hdr/Vallet-Pr%C3%A9sentationHDR.pdf"> HDR </a> (habilitation à diriger des recherches) en sciences de l'information géographique </div>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">December 2016</span>
+            <span class="text-primary lang-en">December 2016</span>
+			<span class="text-primary lang-fr">Decembre 2016</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0">Institut National Polytechnique de Lorraine</h3>
-            <div class="subheading mb-3">PhD in Computer Science (geometry processing)</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2005 - July 2008</span>
-          </div>
-        </div>
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0">Telecom ParisTech</h3>
-            <div class="subheading mb-3">Engineering school</div>
-            <div> Computer Science (computer vision, image processing, artificial intelligence)</div>
+            <h3 class="mb-0 lang-en"> <a href="http://alice.loria.fr/publications/papers/2008/bruno_vallet_phd/theseBVfr.pdf"> PhD </a> in Computer Science </h3>
+			<h3 class="mb-0 lang-fr"> <a href="http://alice.loria.fr/publications/papers/2008/bruno_vallet_phd/theseBVfr.pdf"> Thèse </a> en informatique </h3>
+            <div class="subheading mb-3">Institut National Polytechnique de Lorraine</div>
+			<div class="lang-en"> Function bases on manifolds (geometry processing)</div>
+			<div class="lang-fr"> Bases de fonctions sur les variétés (traitement de la géométrie)</div>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">September 2003 - May 2005</span>
+            <span class="text-primary lang-en">September 2005 - July 2008</span>
+			<span class="text-primary lang-fr">Septembre 2005 - Juillet 2008</span>
           </div>
         </div>
-	<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+		
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
-            <h3 class="mb-0"> Université Pierrre et Marie Curie.</h3>
-            <div class="subheading mb-3"> DEA IARFA (Intelligence Artificielle, Reconnaissance des Formes et Applications) </div>
-            <div> Artificial Intelligence and shape recognition</div>
+            <h3 class="mb-0 lang-en">Master's degree in computer science</h3>
+			<h3 class="mb-0 lang-fr">Diplôme d'ingénieur en informatique</h3>
+            <div class="subheading mb-3">Telecom ParisTech</div>
+            <div class="lang-en"> Computer vision, image processing, artificial intelligence</div>
+			<div class="lang-fr"> Vision par ordinateur, traitement d'image, intelligence artificielle</div>
           </div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">September 2003 - May 2004</span>
+            <span class="text-primary lang-en">September 2003 - May 2005</span>
+			<span class="text-primary lang-fr">Septembre 2003 - Mai 2005</span>
+          </div>
+        </div>
+		
+	<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0"> Université Pierre et Marie Curie.</h3>
+            <div class="subheading mb-3 lang-en"> IARFA Research master's </div>
+			<div class="subheading mb-3 lang-fr"> DEA IARFA </div>
+            <div class="lang-en"> Artificial Intelligence and shape recognition</div>
+			<div class="lang-fr"> Intelligence artificielle et reconnaissance des formes</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary lang-en">September 2003 - May 2004</span>
+			<span class="text-primary lang-fr">Septembre 2003 - Mai 2004</span>
           </div>
         </div>
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
           <div class="resume-content">
-            <h3 class="mb-0">Ecole polytechnique</h3>
-            <div class="subheading mb-3">Generalist engineering school</div>
-		<div> Specialization in mechanics and computer science </div>
-          </div>
+            <h3 class="mb-0 lang-en"> Master's degree in Engineering </h3>
+			<h3 class="mb-0 lang-fr"> Diplôme d'ingénieur généraliste </h3>
+            <div class="subheading mb-3"> Ecole polytechnique (X)</div>
+			</div>
+		<div class="lang-en"> Specialization in mechanics and computer science </div>
+		<div class="lang-en"> Majeures en mécanique et informatique</div>
           <div class="resume-date text-md-right">
-            <span class="text-primary">September 2000 - May 2003</span>
+            <span class="text-primary lang-en">September 2000 - May 2003</span>
+			<span class="text-primary lang-fr">Septembre 2000 - Mai 2003</span>
           </div>
         </div>
       </div>
@@ -467,57 +486,58 @@
       </div>
     </section>
 
-    <section class="section appear clearfix p-3 p-lg-5">
-      <div class="w-100">
-        <h2 class="mb-5 mt-5">Invited Talks</h2>
-        <ol id="talks" class="sub">
-        </ol>
-      </div>
-    </section>
-
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
-      <div class="container">
-        <div class="row text-center title">
-          <h2>Projects</h2>
-        </div>
-        <div class="subheading mb-3">On-going and past research projects</div>
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
+    <div class="w-100">
+	<h2 class="mb-5 lang-en">Projects</h2>
+    <h2 class="mb-5 lang-fr">Projets</h2>
+    <div class="subheading mb-3 lang-en">On-going and past research projects</div>
+	<div class="subheading mb-3 lang-fr">Projets en cours et passés</div>
         <div class="row projects">
           <div class="col-md-4">
             <div class="project">
               <div class="icon-holder">
-                <img src="img/icons/LOGOANR-300x122.png" alt="" class="icon">
+                <img src="../acte/img/icons/BIOM-Logo-small.png" alt="" width=150px>
               </div>
-              <h4 class="heading">Platinum</h4>
-              <p class="description"> Long term 3D cartography for localization </p>
+              <h4 class="heading"><a href="https://umrlastig.github.io/biom/">BIOM</a> </h4>
+		<p class="description "> <span class="lang-en"> Building Inside/Outside Modeling </span> <span class="lang-fr"> Modélisation intérieur/extérieur de bâtiments </span> <br><img src="../acte/img/icons/fr.svg" alt="" width=16px> <b><img src="../acte/img/icons/LOGOANR-300x122.png" alt="ANR" width=32px> AAPG 2018-2021</b></p>
+            </div>
+          </div>
+	<div class="col-md-4">
+		<div class="project">
+              <div class="icon-holder">
+                <img src="../acte/img/icons/timemachine.jpg" alt="" width=100px>
+              </div>
+              <h4 class="heading"><a href="https://www.timemachine.eu/">Time Machine</a></h4>
+              <p class="description">  <span class="lang-en"> The Big Data of the past for the Future of Europe </span> <span class="lang-fr"> Les big data du passé pour l'avenir de l'Europe </span>  <br><img src="../acte/img/icons/Europe.svg" alt="" width=24px><b> CSA H2020 2019-2020</b></p>
+            </div>
+        </div>
+          <div class="col-md-4">
+            <div class="project">
+              <div class="icon-holder">
+                <img src="../acte/img/icons/logo_Platinum.png" alt="" width=150px>
+              </div>
+              <h4 class="heading"><a href="http://platinum.projets.litislab.fr">pLaTINUM</a></h4>
+              <p class="description"> <span class="lang-en"> Long Term MappINg for Urban Mobility </span> <span class="lang-fr"> Cartographie à long terme pour la mobilité urbaine </span>  <br><img src="../acte/img/icons/fr.svg" alt="" width=16px><b> <img src="../acte/img/icons/LOGOANR-300x122.png" alt="ANR" width=32px> AAPG 2015-2019 </b></p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="project">
               <div class="icon-holder">
-                <img src="img/icons/BIOM-Logo-small.png" alt="" class="icon">
+                <img src="../acte/img/icons/logo_Terramobilita.png" alt="" width=150px>
               </div>
-              <h4 class="heading">BIOM</h4>
-              <p class="description"> Building Inside/Outside Modeling</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="project">
-              <div class="icon-holder">
-                <img src="img/icons/timemachine.jpg" alt="" class="icon">
-              </div>
-              <h4 class="heading">TimeMachine</h4>
-              <p class="description"> Big Data of the Past </p>
+              <h4 class="heading"><a href="http://www.terramobilita.fr">Terra Mobilita</a></h4>
+              <p class="description"> <span class="lang-en"> 3D mapping of urban roads and public spaces, accessibility and soft traffic </span> <span class="lang-fr"> Cartographie 3D de la voirie et de l’espace public urbains, accessibilité et circulations douces </span> <br><img src="../acte/img/icons/fr.svg" alt="" width=16px><b> FUI 2011-2015</b></p>
             </div>
           </div>
 	<div class="col-md-4">
             <div class="project">
               <div class="icon-holder">
-                <img src="img/icons/volta.jpg" alt="" class="icon">
+                <img src="../acte/img/icons/volta.jpg" alt="" width=150px>
               </div>
-              <h4 class="heading">Volta</h4>
-              <p class="description"> innoVation in geOspatiaL and 3D daTA </p>
+              <h4 class="heading"> <a href="https://volta.fbk.eu/">Volta</a> </h4>
+		<p class="description"> <span class="lang-en"> innoVation in geOspatiaL and 3D daTA </span> <span class="lang-fr"> Innovation en données géospatiales </span><br><img src="../acte/img/icons/Europe.svg" alt="" width=24px><b> EU MSC RISE H2020</b></p>
             </div>
           </div>
         </div>
@@ -527,20 +547,111 @@
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="other">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="supervisions">
       <div class="w-100">
-        <h2 class="mb-5">Other research activities</h2>
-
-        <div class="subheading mb-3"> Teaching </div>
+        <h2 class="mb-5"> Supervisions </h2>
+        <div class="subheading mb-3"> <span class="lang-en"> PhDs </span> <span class="lang-fr"> Thèses </span> </div>
+		<ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-check-square"></i>
+            <b> Jérôme Demantké </b> (Université Paris Est-MSTIC PhD, 2014), <span class="lang-en"> co-supervised with Nicolas Paparoditis (MATIS, IGN): Photorealistic 3D models façade models reconstruction from terrestrial images and Lidar  </span> <span class="lang-fr"> co-supervisée avec Nicolas Paparoditis (MATIS, IGN): Modèles 3D de façades photoréalistes à partir de données terrestres image et Lidar</span></li>
+          <li>
+            <i class="fa-li fa fa-check-square"></i>
+            <b> Fabrice Monnier </b> (Université Paris Est-MSTIC PhD, 2014), <span class="lang-en">  co-supervised with Bahman Soheilian and Nicolas Paparoditis (MATIS, IGN): Automatic registration of mobile mapping point clouds to 3D city models </span> <span class="lang-fr"> co-supervisée avec Bahman Soheilian et Nicolas Paparoditis (MATIS, IGN): Recalage automatique de nuages de points de cartographie mobile sur des modèles 3D de villes </span> </li>
+          <li>
+            <i class="fa-li fa fa-check-square"></i>
+            <b> Wen Xiao </b> (Université Paris Est-MSTIC PhD, 2015), <span class="lang-en">co-supervised with Nicolas Paparoditis (MATIS, IGN): Change detection from mobile laser scanning point clouds </span> <span class="lang-fr"> co-supervisée avec Nicolas Paparoditis (MATIS, IGN): Détection de changements à partir de nuages de points de cartographie mobile </span></li>
+          <li>
+            <i class="fa-li fa fa-check-square"></i>
+            <b> Miloud Mezian </b> (Université Paris Est-MSTIC PhD, 2019), <span class="lang-en">co-supervised with Bahman Soheilian and Nicolas Paparoditis (MATIS, IGN): Trajectography registration by combined data-model deformation for geometric enriching of existing city models  </span> <span class="lang-fr"> co-supervisée avec Bahman Soheilian et Nicolas Paparoditis (MATIS, IGN): Recalage trajectographique par déformation conjointe données-modèle pour l'enrichissement géométrique de modèles de villes existants </span></li>
+          <li>
+            <i class="fa-li fa fa-square"></i>
+            <b> <a href="http://recherche.ign.fr/labos/matis/cv.php?nom=Boussaha&prenom=Mohamed">Mohamed Boussaha</a> </b> (Université Paris Est-MSTIC PhD since 2016), <span class="lang-en"> co-supervised with Loïc Landrieu (STRUDEL, LASTIG, IGN): Hybrid urban scene analysis from mobile mapping images and laser scan </span> <span class="lang-fr"> co-supervisée avec Loïc Landrieu (LASTIG/STRUDEL, IGN): Analyse hybride de scènes urbaines à partir d'images et de scans laser de cartographie mobile </span></li>
+	<li>
+            <i class="fa-li fa fa-square"></i>
+            <b> <a href="https://umrlastig.github.io/sguinard_homepage/">Stéphane Guinard</a> </b> (Université Paris Est-MSTIC PhD since 2017),  <span class="lang-en">co-supervised with Loïc Landrieu (STRUDEL, LASTIG, IGN): Simplicial complexes reconstruction </span> <span class="lang-fr"> co-supervisée avec Loïc Landrieu (LASTIG/STRUDEL, IGN): Reconstruction de complexes simpliciaux </span> </li>
+	<li>
+            <i class="fa-li fa fa-square"></i>
+            <b> <a href="http://recherche.ign.fr/labos/matis/cv.php?nom=Sulzer&prenom=Raphael">Raphael Sulzer</a> </b> (Université Paris Est-MSTIC PhD since 2018), <span class="lang-en">co-supervised with Renaud Marlet (Imagine, LIGM, École des Ponts ParisTech), Sven Oesau (CSTB) and Loïc Landrieu (STRUDEL, LASTIG, IGN): Structured 3D city reconstruction from heterogeneous data </span> <span class="lang-fr"> co-supervisée avec Renaud Marlet (Imagine, LIGM, École des Ponts ParisTech), Sven Oesau (CSTB) et Loïc Landrieu (LASTIG/STRUDEL, IGN): Reconstruction de modèles de ville structurés à partir de données hétérogènes </span> </li>
+	<li>
+            <i class="fa-li fa fa-square"></i>
+            <b> Rahima Djahel </b> (Université Paris Est-MSTIC PhD since 2018), <span class="lang-en">co-supervised with Pascal Monasse  (Imagine, LIGM, École des Ponts ParisTech): Hybrid data registration </span> <span class="lang-fr"> co-supervisée avec Pascal Monasse  (Imagine, LIGM, École des Ponts ParisTech): Recalage de données hybrides </span> </li>
+        </ul>
+		<div class="subheading mb-3"> Post docs </div>
+		        <ul class="fa-ul mb-0">
+        <li>
+            <i class="fa-li fa fa-check-square"></i> <b>Jean-Pascal Burochin</b>, 2012 <br>
+			<span class="lang-en"> Detecting blind building façades from highly overlapping wide angle aerial imagery. </span>
+			<span class="lang-fr"> Détection de façades aveugles à partir d'imagerie aérienne grand angle à fort recouvrement </span>
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b><a href="http://recherche.ign.fr/labos/matis/cv.php?nom=Rolin&prenom=Pierre">Pierre Rolin</a></b>
+			<span class="lang-en"> advised by </span>
+			<span class="lang-fr"> encadré par </span> Cyrielle Guérin, 2017 <br>
+			<span class="lang-en"> Watertight surface reconstruction from satellite imagery </span>
+			<span class="lang-fr"> Reconstruction de surfaces étanches à partir de données satellite </span>
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b><a href="https://umrlastig.github.io/WU-Teng/">Teng Wu</a></b>,
+			<a href="http://platinum.projets.litislab.fr">pLaTINUM</a> project, 2018 <br>
+			<span class="lang-en"> Mesh update </span> <span class="lang-fr"> Mise à jour de maillages </span>
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b><a href="https://umrlastig.github.io/WU-Teng/">Teng Wu</a></b>, AI4GEO project, 2020 <br>
+			<span class="lang-en"> Deep Learning for dense matching </span> <span class="lang-fr"> Corrélation dense par apprentissage profond </span>
+		</li>
+        </ul>
+		<div class="subheading mb-3"> <span class="lang-en"> Internships </span> <span class="lang-fr"> Stages </span> </div>
+		        <ul class="fa-ul mb-0">
+        <li>
+            <i class="fa-li fa fa-check-square"></i> <b>Fabrice Monnier</b> (EGID, Université Bordeaux III), 2011 <br>
+			<span class="lang-en"> Vegetation reconstruction from mobile Lidar scans </span>
+			<span class="lang-fr"> Reconstruction de végétation à partir de données laser terrestres. </span>
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b>Triomphant Koyame-Linga</b> (Institut d'Optique), 2015 <br>
+			<span class="lang-en"> Trajectographic registration based on 3D landmarks </span>
+			<span class="lang-fr"> Recalage de trajectoire basée sur des points d'intérêt laser. </span>
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b>Mourad Miled</b> (Master 2 : Sciences pour l’Ingénieur (Intelligence artificielle, Image et son pour les systèmes intelligents), Université Pierre et Marie Curie – Paris 6), 2015 <br>
+			<span class="lang-en"> Joint image/Lidar data registration </span>
+			<span class="lang-fr">  Recalage conjoint de données laser et image </span>
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b>Xin Wang</b> (M2 Systèmes Intelligents et Robotique, UMPC), 2016 <br>
+			<span class="lang-en"> Visual servoing for precise image localisation </span>
+			<span class="lang-fr"> Asservissement visuel pour la localisation précise d’image </span>
+			
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b> <a href="https://umrlastig.github.io/sguinard_homepage/">Stéphane Guinard</a> </b> (Mastère spécialisé PPMD, ENSG), 2016 <br>
+			<span class="lang-en"> Mobile Lidar scans segmentation by multivariate total variation and metric learning </span>
+			<span class="lang-fr"> Segmentation de nuages de points de cartographie mobile par variation totale multivariée et apprentissage de métrique </span>
+		</li>
+		<li>
+			<i class="fa-li fa fa-check-square"></i> <b> Zoumana Mallé </b>, projet <a href="../biom">BIOM</a>, coencadré avec Pascal Monasse (IMAGINE) et <a href="https://umrlastig.github.io/sguinard_homepage/">Stéphane Guinard</a>, 2019 <br>
+			<span class="lang-en"> Landmarks extraction for Inside/Outside registration </span>
+			<span class="lang-fr"> Extraction d'amers pour le recalage intérieur/extérieur</span>
+		</li>
+        </ul>
+		</div>
+	</section>
+		
+	<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="other">
+      <div class="w-100">
+        <h2 class="mb-5"> <span class="lang-en"> Other research activities </span> <span class="lang-fr"> Autres activités de recherche </span> </h2>
+        <div class="subheading mb-3"> <span class="lang-en"> Teaching </span> <span class="lang-fr"> Enseignement </span> </div>
 
         <div class="row projects">
           <div class="col-md-4">
             <div class="project">
               <div class="icon-holder">
-                <img src="img/icons/ensg.png" alt="" class="icon">
+                <img src="../acte/img/icons/ensg.png" alt="" class="icon">
               </div>
               <h4 class="heading"> ENSG/ING2 </h4>
-              <a class="description" href="http://www.ensg.eu/Engineer-cycle"> Courses in image processing and shape recognition in the second year of the Engineer cycle</a>
+              <a class="description" href="http://www.ensg.eu/Engineer-cycle"> 
+			  <span class="lang-en"> Courses in image processing and shape recognition in the second year of the Engineer cycle </span> <span class="lang-fr"> Cours en traitement d'image et reconnaissancedes formes en deuxième année du cycle d'ingénieur de l'ENSG </span></a>
             </div>
           </div>
           <div class="col-md-4">
@@ -549,7 +660,8 @@
                 <img src="img/icons/ensg.png" alt="" class="icon">
               </div>
               <h4 class="heading"> ENSG/PPMD </h4>
-              <a class="description" href="http://www.ensg.eu/Academic-Programs-MS-PPMD"> Courses in image processing, optimization and reconstruction in the PPMD specialized master's degree</a>
+              <a class="description" href="http://www.ensg.eu/Academic-Programs-MS-PPMD">
+			  <span class="lang-en"> Courses in image processing, optimization and reconstruction in the PPMD specialized master's degree </span> <span class="lang-fr"> Cours en traitement d'image optimisation et reconstruction au master spécialisé PPMD de l'ENSG</span></a>
             </div>
           </div>
           <div class="col-md-4">
@@ -558,40 +670,11 @@
                 <img src="img/icons/ensg.png" alt="" class="icon">
               </div>
               <h4 class="heading"> ENSG/TSI </h4>
-              <a class="description" href="http://www.ensg.eu/Academic-Programs-M2-TSI"> Courses in 3D data structures in the TSI master's degree</a>
+              <a class="description" href="http://www.ensg.eu/Academic-Programs-M2-TSI">
+			  <span class="lang-en"> Courses in 3D data structures in the TSI master's degree </span> <span class="lang-fr"> Cours sur les structures de données 3D au master TSI de l'ENSG</span></a>
             </div>
           </div>
         </div>
-
-        
-
-        <div class="subheading mb-3 mt-3">Supervisions</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check-square"></i>
-            Jérôme Demantké (Université Paris Est-MSTIC PhD, 2014), co-supervised with Nicolas Paparoditis (MATIS, IGN): Photorealistic 3D models façade models reconstruction from terrestrial images and Lidar </li>
-          <li>
-            <i class="fa-li fa fa-check-square"></i>
-            Fabrice Monnier (Université Paris Est-MSTIC PhD, 2014), co-supervised with Bahman Soheilian and Nicolas Paparoditis (MATIS, IGN): Automatic registration of mobile mapping point clouds to 3D city models </li>
-          <li>
-            <i class="fa-li fa fa-check-square"></i>
-            Wen Xiao (Université Paris Est-MSTIC PhD, 2015), co-supervised with Nicolas Paparoditis (MATIS, IGN): Change detection from mobile laser scanning point clouds</li>
-          <li>
-            <i class="fa-li fa fa-check-square"></i>
-            Miloud Mezian (Université Paris Est-MSTIC PhD, 2019), co-supervised with Bahman Soheilian and Nicolas Paparoditis (MATIS, IGN): Trajectography registration by combined data-model deformation for geometric enriching of existing city models </li>
-          <li>
-            <i class="fa-li fa fa-square"></i>
-            Mohamed Boussaha (Université Paris Est-MSTIC PhD since 2016), co-supervised with Loïc Landrieu (STRUDEL, LASTIG, IGN): Hybrid urban scene analysis from mobile mapping images and laser scan </li>
-	<li>
-            <i class="fa-li fa fa-square"></i>
-            Stéphane Guinard (Université Paris Est-MSTIC PhD since 2017), co-supervised with Loïc Landrieu (STRUDEL, LASTIG, IGN): Simplicial complexes reconstruction </li>
-	<li>
-            <i class="fa-li fa fa-square"></i>
-            Raphael Sulzer (Université Paris Est-MSTIC PhD since 2018), co-supervised with Renaud Marlet (Imagine, LIGM, École des Ponts ParisTech), Sven Oesau (CSTB) and Loïc Landrieu (STRUDEL, LASTIG, IGN): Structured 3D city reconstruction from heterogeneous data </li>
-	<li>
-            <i class="fa-li fa fa-square"></i>
-            Rahima Djahel (Université Paris Est-MSTIC PhD since 2018), co-supervised with Pascal Monasse  (Imagine, LIGM, École des Ponts ParisTech): Hybrid data registration </li>
-        </ul>
 
 	<div class="subheading mb-3 mt-3">Other </div>
         <ul class="fa-ul mb-0">
@@ -599,7 +682,6 @@
             <i class="fa-li fa fa-check-square"></i>
             <a href="http://www2.isprs.org/commissions/comm2/wgs.html#wg_II/4"> Co-chair of the ISPRS WG II/4 - 3D Scene Reconstruction and Analysis </a> since Jul. 2017</li>
         </ul>
-
     </section>
 
   </div>
