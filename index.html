@@ -33,7 +33,7 @@
 
 </head>
 
-<body id="page-top" onload="reviewingVis('reviewing.json'); getPublicationsAuthor('bruno-vallet');">
+<body id="page-top" onload="displayNews(); getPublicationsAuthor('bruno-vallet');">
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <select class="selectpicker" data-width="fit">
@@ -185,25 +185,15 @@
     </section>
 
     <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="news">
-      <div class="w-100">
-        <h2 class="mb-5">News</h2>
-        <ul class="fa-ul mb-0">
-        <li>
-            <i class="fa-li fa fa-check-square"></i>
-            <h5>08/12/19: Miloud Mezian's PhD</h5>
-                <p> My PhD student Miloud Mezian defends his PhD thesis</p> </li>
-	<li>
-            <i class="fa-li fa fa-square"></i>
-            <h5>17/01/20: BIOM meeting</h5>
-            <p> Annual meeting of the ANR BIOM project</p> </li>
-          <li>
-            <i class="fa-li fa fa-square"></i>
-            <h5>13-16/01/20: TRB 2020</h5>
-                <p> Participation at and speech on "Creating digital twins of cities: from data acquisition to 3D modeling" at the <a href="http://www.trb.org/AnnualMeeting/AnnualMeeting.aspx"> 2020 Transportation Research Board (TRB) Annual Meeting </a> </p> </li>
-        </ul>
-    </section>
+	
+	<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="news">
+		<div class="w-100">
+			<h2 class="mb-5 lang-en">News</h2>
+			<h2 class="mb-5 lang-fr">Actualités</h2>
+			<ul class="fa-ul mb-0" id="news-container">
+			</ul>
+		</div>
+	</section>
 
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
@@ -563,10 +553,10 @@
             <i class="fa-li fa fa-check-square"></i>
             <b> Miloud Mezian </b> (Université Paris Est-MSTIC PhD, 2019), <span class="lang-en">co-supervised with Bahman Soheilian and Nicolas Paparoditis (MATIS, IGN): Trajectography registration by combined data-model deformation for geometric enriching of existing city models  </span> <span class="lang-fr"> co-supervisée avec Bahman Soheilian et Nicolas Paparoditis (MATIS, IGN): Recalage trajectographique par déformation conjointe données-modèle pour l'enrichissement géométrique de modèles de villes existants </span></li>
           <li>
-            <i class="fa-li fa fa-square"></i>
+            <i class="fa-li fa fa-check-square"></i>
             <b> <a href="http://recherche.ign.fr/labos/matis/cv.php?nom=Boussaha&prenom=Mohamed">Mohamed Boussaha</a> </b> (Université Paris Est-MSTIC PhD since 2016), <span class="lang-en"> co-supervised with Loïc Landrieu (STRUDEL, LASTIG, IGN): Hybrid urban scene analysis from mobile mapping images and laser scan </span> <span class="lang-fr"> co-supervisée avec Loïc Landrieu (LASTIG/STRUDEL, IGN): Analyse hybride de scènes urbaines à partir d'images et de scans laser de cartographie mobile </span></li>
 	<li>
-            <i class="fa-li fa fa-square"></i>
+            <i class="fa-li fa fa-check-square"></i>
             <b> <a href="https://umrlastig.github.io/sguinard_homepage/">Stéphane Guinard</a> </b> (Université Paris Est-MSTIC PhD since 2017),  <span class="lang-en">co-supervised with Loïc Landrieu (STRUDEL, LASTIG, IGN): Simplicial complexes reconstruction </span> <span class="lang-fr"> co-supervisée avec Loïc Landrieu (LASTIG/STRUDEL, IGN): Reconstruction de complexes simpliciaux </span> </li>
 	<li>
             <i class="fa-li fa fa-square"></i>
