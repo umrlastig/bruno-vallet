@@ -37,7 +37,7 @@
 				header: true,
 				step: function(row) {
 					if(row.data[0].date){
-						if(row.data[0].team=="ACTE"){
+						if(row.data[0].perso=="vallet"){
 						var parent = document.getElementById("news-container");
 						divForAllNews(parent, row.data);}
 					}
