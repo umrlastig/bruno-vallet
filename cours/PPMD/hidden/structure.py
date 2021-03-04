@@ -1,22 +1,25 @@
-﻿# input/output
+﻿# input
 img_filename = "hyst.png"
-sigma = 1.
+n_iter=100
+seuil=1.5
+n_in_min=150
 
 print('Initialisation')
 import numpy as np
 import scipy as sp
-import scipy.misc as sm
-import skimage as sf
 import random
-import math 
+import math
+import imageio
 
-def Coords(img,seuil):
+
+def Coords(img, seuil):
     ret = []
-    for l in range(1,img.shape[0]):
-        for c in range(1,img.shape[1]):
-            if img[l,c,0]>seuil:
-                ret.append(np.array([l,c]))
+    for l in range(1, img.shape[0]):
+        for c in range(1, img.shape[1]):
+            if img[l, c, 0] > seuil:
+                ret.append(np.array([l, c]))
     return ret
+
 
 def DroiteL2(coords):
     G = np.zeros(2)
@@ -25,14 +28,22 @@ def DroiteL2(coords):
         G += lc
         n_pt += 1
     G /= n_pt
-    E = np.zeros((2,2))
+    print('G=')
+    print(G)
+    E = np.zeros((2, 2))
     for lc in coords:
-        v = lc-G
-        E = E + np.outer(v,v)
+        v = lc - G
+        E = E + np.outer(v, v)
+    print('El2=')
+    print(E)
     evals, evects = np.linalg.eig(E)
-    d = evects[:,0]
+    print('Valeurs propres:')
+    print(evals)
+    print('Vecteurs propres:')
+    print(evects)
+    d = evects[:, 0]
     if evals[1] > evals[0]:
-        d = evects[:,1]
+        d = evects[:, 1]
     sG = G.dot(d)
     s_min = s_max = sG
     for lc in coords:
@@ -41,64 +52,72 @@ def DroiteL2(coords):
             s_min = s
         if s > s_max:
             s_max = s
-    return G + (s_min-sG)*d, G + (s_max-sG)*d
+    return G + (s_min - sG) * d, G + (s_max - sG) * d
+
 
 def normal(P1, P2):
-    xf = (P2-P1).astype(float)
+    xf = (P2 - P1).astype(float)
     d = xf / math.sqrt(float(xf.dot(xf)))
-    return np.array([d[1],-d[0]])
+    return np.array([d[1], -d[0]])
 
-def Ransac(coords, n_iter, seuil):
+
+def Ransac(coords):
     n_pts = len(coords)
-    print('%d contour points'%n_pts)
+    print('%d contour points' % n_pts)
     n_in_max = 0
     P1_max = P2_max = coords[0]
     for iter in range(n_iter):
-        P1 = coords[random.randint(0,n_pts-1)]
-        P2 = coords[random.randint(0,n_pts-1)]
+        P1 = coords[random.randint(0, n_pts - 1)]
+        P2 = coords[random.randint(0, n_pts - 1)]
         n = normal(P2, P1)
         n_in = 0
         for x in coords:
-            if abs(n.dot(x-P1))<seuil:
+            if abs(n.dot(x - P1)) < seuil:
                 n_in += 1
         if n_in > n_in_max:
             n_in_max = n_in
             P1_max = P1
             P2_max = P2
-    print('Best line has %d inliers'%n_in_max)
+    print('Best line has %d inliers' % n_in_max)
     inliers = []
     outliers = []
     n = normal(P2_max, P1_max)
     for x in coords:
-        if abs(n.dot(x-P1_max)) < seuil:
+        if abs(n.dot(x - P1_max)) < seuil:
             inliers.append(x)
         else:
             outliers.append(x)
     return inliers, outliers
-    
-def MultiRansac(coords, n_iter, seuil, n_in_min):
+
+
+def MultiRansac(coords):
     ret = []
     outliers = coords
+    iter=0
     while True:
-        inliers, outliers = Ransac(outliers, n_iter, seuil)
+        iter += 1
+        print("RANSAC iteration %d" % iter)
+        inliers, outliers = Ransac(outliers)
         if len(inliers) < n_in_min:
             return ret
         ret.append(DroiteL2(inliers))
-    
+
+
 print('Reading %s' % img_filename)
-img = sm.imread(img_filename)
-P_min, P_max = DroiteL2(Coords(img,250))
-droites = MultiRansac(Coords(img,100),100,2,150)
-print('RANSAC found %d lines'%len(droites))
+img = imageio.imread(img_filename)
+P_min, P_max = DroiteL2(Coords(img, 250))
+print('Pmin/max:')
+print(P_min)
+print(P_max)
+droites = MultiRansac(Coords(img, 100))
+print('RANSAC found %d lines' % len(droites))
 
-from PIL import Image, ImageDraw
-im = Image.open(img_filename)
-d = ImageDraw.Draw(im)
-d.line([(P_min[1],P_min[0]), (P_max[1],P_max[0])], fill=(255, 255, 0))
+import matplotlib.pyplot as plt
 
+plt.figure()
+plt.imshow(img)
+plt.plot((P_min[1], P_max[1]), (P_min[0], P_max[0]), color=(0, 1, 0))
 for droite in droites:
-    d.line([(droite[0][1],droite[0][0]), (droite[1][1],droite[1][0])],
-        fill=(0, 255, 0))
-
-im.save("ransac.png")
-
+    plt.plot((droite[0][1], droite[1][1]), (droite[0][0], droite[1][0]), color=(1, 0, 1))
+plt.title("image")
+plt.show()
