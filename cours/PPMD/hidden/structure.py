@@ -1,7 +1,7 @@
 ﻿# input
 img_filename = "hyst.png"
 n_iter=100
-seuil=1.5
+seuil=1
 n_in_min=150
 
 print('Initialisation')
@@ -42,8 +42,14 @@ def DroiteL2(coords):
     print('Vecteurs propres:')
     print(evects)
     d = evects[:, 0]
+    n = evects[:, 1]
     if evals[1] > evals[0]:
         d = evects[:, 1]
+        n = evects[:, 0]
+    print('d:')
+    print(d)
+    print('n:')
+    print(n)
     sG = G.dot(d)
     s_min = s_max = sG
     for lc in coords:
@@ -52,7 +58,7 @@ def DroiteL2(coords):
             s_min = s
         if s > s_max:
             s_max = s
-    return G + (s_min - sG) * d, G + (s_max - sG) * d
+    return G + (s_min - sG) * d, G + (s_max - sG) * d, G, n
 
 
 def normal(P1, P2):
@@ -105,7 +111,7 @@ def MultiRansac(coords):
 
 print('Reading %s' % img_filename)
 img = imageio.imread(img_filename)
-P_min, P_max = DroiteL2(Coords(img, 250))
+P_min, P_max, G, n = DroiteL2(Coords(img, 250))
 print('Pmin/max:')
 print(P_min)
 print(P_max)
@@ -117,6 +123,8 @@ import matplotlib.pyplot as plt
 plt.figure()
 plt.imshow(img)
 plt.plot((P_min[1], P_max[1]), (P_min[0], P_max[0]), color=(0, 1, 0))
+Gp = G + 50*n
+plt.plot((G[1], Gp[1]), (G[0], Gp[0]), color=(1, 0, 0))
 for droite in droites:
     plt.plot((droite[0][1], droite[1][1]), (droite[0][0], droite[1][0]), color=(1, 0, 1))
 plt.title("image")
